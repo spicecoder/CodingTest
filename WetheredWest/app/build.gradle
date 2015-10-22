@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 8
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.example.weatherinwest"
+        minSdkVersion 8
+        targetSdkVersion 8
+    }
+    dependencies {
+        // Module dependency
+        //  compile project(":lib")
+
+        // Remote binary dependency
+        //  compile 'com.android.support:appcompat-v7:19.0.1'
+
+        // Local binary dependency
+        compile fileTree(dir: 'C:\\BigAndroid\\westpacTest\\CodingTest', include: ['*.jar'])
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
